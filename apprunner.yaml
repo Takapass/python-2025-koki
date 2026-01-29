@@ -8,6 +8,7 @@ build:
       - python3 -m pip install --upgrade pip
       - python3 -m pip install -r requirements.txt --target ./vendor
       - PYTHONPATH=./vendor python3 manage.py collectstatic --noinput
+
 run:
   env:
     - name: DB_NAME
@@ -38,3 +39,4 @@ run:
   command: sh entrypoint.sh
   network:
     port: 8000
+
